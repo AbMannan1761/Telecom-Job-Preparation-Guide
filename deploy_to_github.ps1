@@ -36,11 +36,11 @@ if (-not $status) {
     if ($remotes -contains "origin") {
         git push origin main
         Write-Host "`nসফলভাবে গিটহাবে পুশ হয়েছে এবং GitHub Pages সিঙ্ক হয়েছে!" -ForegroundColor Cyan
-        Write-Host "লাইভ ই-বুক লিঙ্ক: https://abmannan1761.github.io/telecom-job-guide-book/" -ForegroundColor Yellow
+        Write-Host "লাইভ ই-বুক লিঙ্ক: https://abmannan1761.github.io/Telecom-Job-Preparation-Guide/" -ForegroundColor Yellow
     } else {
         Write-Host "`nরিমোট রিপোজিটরি সেট করা নেই।" -ForegroundColor Yellow
         Write-Host "অনুগ্রহ করে একবার নিচের কমান্ডটি চালান:" -ForegroundColor White
-        Write-Host "git remote add origin https://github.com/AbMannan1761/telecom-job-guide-book.git" -ForegroundColor Cyan
+        Write-Host "git remote add origin https://github.com/AbMannan1761/Telecom-Job-Preparation-Guide.git" -ForegroundColor Cyan
         Write-Host "git push -u origin main" -ForegroundColor Cyan
     }
 }

@@ -1,9 +1,9 @@
 # টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং জব প্রিপারেশন গাইড
 ## (Telecom Engineering Job Preparation Guide Book - 105 Pages Master Edition & Web eBook)
 
-[![GitHub Pages](https://img.shields.io/badge/Live-eBook%20Reader-00D4B2?style=for-the-badge&logo=github)](https://abmannan1761.github.io/telecom-job-guide-book/)
-[![Platform](https://img.shields.io/badge/Platform-Web%20%7C%20Word%20DOCX%20%7C%20PDF-6366F1?style=for-the-badge)](https://abmannan1761.github.io/telecom-job-guide-book/)
-[![Status](https://img.shields.io/badge/Status-105%20Pages%20Complete-success?style=for-the-badge)](https://abmannan1761.github.io/telecom-job-guide-book/)
+[![GitHub Pages](https://img.shields.io/badge/Live-eBook%20Reader-00D4B2?style=for-the-badge&logo=github)](https://abmannan1761.github.io/Telecom-Job-Preparation-Guide/)
+[![Platform](https://img.shields.io/badge/Platform-Web%20%7C%20Word%20DOCX%20%7C%20PDF-6366F1?style=for-the-badge)](https://abmannan1761.github.io/Telecom-Job-Preparation-Guide/)
+[![Status](https://img.shields.io/badge/Status-105%20Pages%20Complete-success?style=for-the-badge)](https://abmannan1761.github.io/Telecom-Job-Preparation-Guide/)
 
 ---
 
@@ -70,15 +70,11 @@ git push origin main
 
 ## 🚀 গিটহাব রিপোজিটরিতে ডেপ্লয় করার নির্দেশিকা
 
-১. গিটহাবে একটি নতুন পাবলিক রিপোজিটরি তৈরি করুন: `telecom-job-guide-book`
+১. গিটহাবে রিপোজিটরি তৈরি: `Telecom-Job-Preparation-Guide`
 ২. টার্মিনালে নিচের কমান্ডগুলো রান করুন:
 
 ```bash
-git init
-git add .
-git commit -m "Initial commit: 105 pages Telecom Job Guide Book & Web eBook"
-git branch -M main
-git remote add origin https://github.com/AbMannan1761/telecom-job-guide-book.git
+git remote add origin https://github.com/AbMannan1761/Telecom-Job-Preparation-Guide.git
 git push -u origin main
 ```
 
@@ -87,7 +83,7 @@ git push -u origin main
    * **Branch:** `main` এবং ফোল্ডার সিলেক্ট করুন `/docs`
    * **Save** বাটনে ক্লিক করুন।
 ৪. ২ মিনিটের মধ্যে সাইটটি লাইভ হয়ে যাবে:  
-   👉 **`https://abmannan1761.github.io/telecom-job-guide-book/`**
+   👉 **`https://abmannan1761.github.io/Telecom-Job-Preparation-Guide/`**
 
 ---
 

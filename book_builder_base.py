@@ -29,14 +29,31 @@ def create_telecom_book_100p():
     COLOR_MUTED = RGBColor(100, 110, 125)      # Muted Gray
     COLOR_LINK = RGBColor(0, 85, 165)          # Hyperlink Blue
 
+    # Configure Normal style default fonts (Bangla: Nikosh, English: Times New Roman)
+    normal_style = doc.styles['Normal']
+    normal_style.font.name = 'Times New Roman'
+    normal_style.font.size = Pt(11)
+    norm_rPr = normal_style.element.get_or_add_rPr()
+    for child in list(norm_rPr):
+        if child.tag.endswith('rFonts'):
+            norm_rPr.remove(child)
+    norm_rPr.append(parse_xml(f'<w:rFonts {nsdecls("w")} w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Nikosh"/>'))
+
     bm_counter = [1]
 
-    def set_font(run, font_name="Calibri", size_pt=11, bold=False, italic=False, color=COLOR_TEXT):
+    def set_font(run, font_name="Times New Roman", font_name_cs="Nikosh", size_pt=11, bold=False, italic=False, color=COLOR_TEXT):
         run.font.name = font_name
         run.font.size = Pt(size_pt)
         run.bold = bold
         run.italic = italic
         run.font.color.rgb = color
+
+        rPr = run._r.get_or_add_rPr()
+        for child in list(rPr):
+            if child.tag.endswith('rFonts'):
+                rPr.remove(child)
+        rFonts = parse_xml(f'<w:rFonts {nsdecls("w")} w:ascii="{font_name}" w:hAnsi="{font_name}" w:cs="{font_name_cs}"/>')
+        rPr.append(rFonts)
 
     def attach_bookmark(paragraph, bookmark_name):
         bm_id = bm_counter[0]

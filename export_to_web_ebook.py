@@ -637,10 +637,10 @@ def generate_html(docs_dir, collector):
   <meta name="description" content="বিটিআরসি, বিটিসিএল, টেলিটক, বিএসসিএল ও এমএনও ইঞ্জিনিয়ার নিয়োগ পরীক্ষার জন্য একটি পূর্ণাঙ্গ প্রস্তুতি সহায়িকা। গ্রন্থনায়: প্রকৌশলী মোহাম্মদ আব্দুল মান্নান, উপ সহকারী পরিচালক (বিটিআরসি)।">
   <meta name="author" content="Engr. Mohammad Abdul Mannan">
 
-  <!-- Google Fonts: Hind Siliguri for Bengali & Plus Jakarta Sans / JetBrains Mono -->
+  <!-- Typography: Nikosh for Bengali & Times New Roman for English -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -760,6 +760,16 @@ def generate_css(docs_dir):
    Author: Engr. Mohammad Abdul Mannan | BTRC Spectrum Division
    ========================================================================= */
 
+@font-face {
+  font-family: 'Nikosh';
+  src: local('Nikosh'), local('NikoshBAN'),
+       url('https://cdn.jsdelivr.net/gh/Shahriar-Rafi/Nikosh-Webfont@master/Nikosh.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/Shahriar-Rafi/Nikosh-Webfont@master/Nikosh.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Color Palette - Light Theme */
   --bg-primary: #f8fafc;
@@ -780,8 +790,9 @@ def generate_css(docs_dir):
   --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
 
-  --font-bengali: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-ui: 'Plus Jakarta Sans', sans-serif;
+  --font-bengali: 'Nikosh', 'NikoshBAN', 'SolaimanLipi', 'Tiro Bangla', serif;
+  --font-english: 'Times New Roman', Times, serif;
+  --font-ui: 'Times New Roman', 'Nikosh', serif;
   --font-mono: 'JetBrains Mono', Consolas, monospace;
 
   --topbar-height: 64px;
@@ -828,6 +839,14 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-title, .toc-title, .author-name, .section-heading, .formula-title, .math-title {
+  font-family: var(--font-bengali);
+}
+
+.english-text, .badge, .status-indicator, code, .formula-code-box, .btn-label, .formula-math, .meta-name, .meta-role {
+  font-family: var(--font-english);
 }
 
 /* Reading Progress Bar */

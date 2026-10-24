@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Temporary and backup files
+~$*.docx
+*.tmp
+*.log
+temp_*.py
+test_*.docx
+portfolio_index.html
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
